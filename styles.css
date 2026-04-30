@@ -4,6 +4,7 @@
     --primaryLight: #ffba43;
     --secondary: #ffba43;
     --secondaryLight: #ffba43;
+    --secondaryDark: #bf8d38;
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
@@ -82,7 +83,7 @@ body {
     padding-top: clamp(3.75rem, 18vw, 16rem);
     padding-bottom: clamp(3.75rem, 18vw, 16rem);
     position: relative;
-    height: 100vh;
+    height: 90vh;
     z-index: 1;
   }
   #video .cs-container {
@@ -117,6 +118,14 @@ body {
     color: var(--bodyTextColorWhite);
     backdrop-filter: blur(10px) saturate(70%);
     border-radius: 12px;
+  }
+  #video .cs-titlestyle {
+    font-family: "Georgia";
+    font-style: italic;
+    backdrop-filter: blur(10px) saturate(70%);
+    color: var(--bodyTextColorWhite);
+    border-radius: 12px;
+    text-shadow: 2px 2px 2px #000000;
   }
   #video .cs-smalltitle {
     backdrop-filter: blur(10px) saturate(70%);
@@ -209,7 +218,15 @@ body {
 }
 
 @media only screen and (min-width: 48rem) {
-  
+    #video {
+    background-color: var(--headerColor);
+    /* 60px - 256px */
+    padding-top: clamp(3.75rem, 18vw, 16rem);
+    padding-bottom: clamp(3.75rem, 18vw, 16rem);
+    position: relative;
+    height: 100vh;
+    z-index: 1;
+  }
 }
       
 /*-- -------------------------- -->
@@ -524,6 +541,21 @@ body {
     list-style: none;
     background-color: var(--primary);
     /* prevents padding from affecting height and width */
+    padding: 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+    #studio .cs-itemcontact{
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    background-color: var(--secondaryDark);
+    /* prevents padding from affecting height and width */
+    padding: 12px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -566,12 +598,6 @@ body {
     line-height: 1.5em;
     text-align: center;
     color: var(--bodyTextColorWhite);
-  }
-  #studio .cs-item-text2{
-    font-size: var(--bodyFontSize);
-    line-height: 1.5em;
-    color: var(--bodyTextColor);
-    margin: 0 4vw 0 4vw;
   }
   #studio .cs-button-solid {
     font-size: var(--bodyFontSize);
