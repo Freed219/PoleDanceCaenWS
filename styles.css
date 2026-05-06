@@ -1,8 +1,8 @@
 :root {
     /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     --primary: #DD8C8B;
-    --primaryLight: #ffba43;
-    --secondary: #ffba43;
+    --primaryLight: #ddb58b;
+    --secondary: #ddb58b;
     --secondaryLight: #ffba43;
     --secondaryDark: #bf8d38;
     --headerColor: #1a1a1a;
@@ -116,20 +116,14 @@ body {
     max-width: 100%;
     margin: 0;
     color: var(--bodyTextColorWhite);
-    backdrop-filter: blur(10px) saturate(70%);
-    border-radius: 12px;
   }
   #video .cs-titlestyle {
     font-family: "Georgia";
     font-style: italic;
-    backdrop-filter: blur(10px) saturate(70%);
     color: var(--bodyTextColorWhite);
-    border-radius: 12px;
     text-shadow: 2px 2px 2px #000000;
   }
   #video .cs-smalltitle {
-    backdrop-filter: blur(10px) saturate(70%);
-    border-radius: 12px;
     text-shadow: 2px 2px 2px #000000;
   }
   #video .cs-link {
@@ -553,7 +547,7 @@ body {
     height: 100%;
     width: 100%;
     list-style: none;
-    background-color: var(--secondaryDark);
+    background-color: var(--secondary);
     /* prevents padding from affecting height and width */
     padding: 12px;
     box-sizing: border-box;
@@ -598,6 +592,13 @@ body {
     line-height: 1.5em;
     text-align: center;
     color: var(--bodyTextColorWhite);
+  }
+    #studio .cs-item-text2{
+    font-size: var(--bodyFontSize);
+    font-weight: 600;
+    line-height: 1.5em;
+    text-align: center;
+    color: var(--headerColor);
   }
   #studio .cs-button-solid {
     font-size: var(--bodyFontSize);
@@ -902,6 +903,10 @@ body {
   #contact .cs-content {
     text-align: left;
   }
+  #contact .cs-text {
+    margin-top: 1rem;
+    color: var(--headerColor);
+  }
   #contact .cs-title {
     margin-bottom: 2rem;
   }
@@ -916,6 +921,7 @@ body {
   #contact .cs-label {
     /* 14px - 16px */
     font-size: var(--bodyFontSize);
+    font-weight: 600;
     width: 100%;
     color: var(--headerColor);
     display: flex;
@@ -982,10 +988,11 @@ body {
   }
   #contact .cs-submit {
     text-transform: uppercase;
-    background-color: var(--secondaryLight);
+    background-color: var(--secondary);
     color: var(--headerColor);
     border: none;
     transition: color 0.3s;
+    margin-bottom: 2rem;
   }
   #contact .cs-submit:hover {
     cursor: pointer;
