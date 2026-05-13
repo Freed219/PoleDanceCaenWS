@@ -16,6 +16,10 @@
     --sectionPadding: 4vh 4vw 4vh 4vw;
 }
 
+h1 {
+    display: none;
+}
+
 body {
     font-family: "Roboto";
     margin: 0;
